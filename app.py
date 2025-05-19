@@ -22,7 +22,7 @@ def get_db_connection():
         port=db_config.DB_PORT,
         user=db_config.DB_USER,
         password=db_config.DB_PASS,
-        database=db_config.railway
+        database=db_config.DB_NAME
     )
 
 
