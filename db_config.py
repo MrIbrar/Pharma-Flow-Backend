@@ -2,10 +2,11 @@
 
 import os
 
-MYSQL_HOST = os.getenv('MYSQL_HOST', 'localhost')  # fallback local dev ke liye
-MYSQL_USER = os.getenv('MYSQL_USER', 'root')
-MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD', 'root123')
-MYSQL_DB = os.getenv('MYSQL_DB', 'store_inventory')
+DB_HOST = os.getenv('DB_HOST', 'ballast.proxy.rlwy.net')  # fallback local dev ke liye
+DB_PORT = os.getenv('DB_PORT', '31075')
+DB_USER = os.getenv('DB_USER', 'root')
+DB_PASS = os.getenv('DB_PASS', 'GwiJdzlvWwYQQqTCgzJUphdnORjmRxHq')
+DB_NAME = os.getenv('DB_NAME', 'railway')
 
 
 #MYSQL_HOST = 'localhost'
