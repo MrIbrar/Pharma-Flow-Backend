@@ -1,11 +1,11 @@
 import pytesseract
 import cv2
 import os
+import platform
 
-# Set the path to tesseract executable (only for Windows)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-
-#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# Sirf Windows ke liye path set karein
+if platform.system() == "Windows":
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 def extract_text_from_image(image_path):
     if not os.path.exists(image_path):
@@ -18,9 +18,6 @@ def extract_text_from_image(image_path):
 
         # Convert to grayscale
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-        # Optional: You can improve OCR by thresholding
-        # gray = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
 
         # Extract text using pytesseract
         text = pytesseract.image_to_string(gray)
