@@ -1,0 +1,12 @@
+# === Flask backend ===
+flask
+flask-cors
+gunicorn
+werkzeug
+
+# === Database ===
+mysql-connector-python
+
+# === OCR/Image processing ===
+pytesseract
+opencv-python

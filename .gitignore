@@ -1,0 +1,9 @@
+venv/
+VENV/
+__pycache__/
+static/uploads/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+*.sqlite3
