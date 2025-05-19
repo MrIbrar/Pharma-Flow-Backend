@@ -18,10 +18,11 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # Helper: Get DB Connection
 def get_db_connection():
     return mysql.connector.connect(
-        host=db_config.MYSQL_HOST,
-        user=db_config.MYSQL_USER,
-        password=db_config.MYSQL_PASSWORD,
-        database=db_config.MYSQL_DB
+        host=db_config.DB_HOST,
+        port=db_config.DB_PORT,
+        user=db_config.DB_USER,
+        password=db_config.DB_PASS,
+        database=db_config.railway
     )
 
 
